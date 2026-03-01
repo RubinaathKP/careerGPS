@@ -1,0 +1,195 @@
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.headerIcon {
+    color: var(--color-primary);
+    width: 32px;
+    height: 32px;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.companyCard {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.companyHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.logoPlaceholder {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+:global([data-theme='light']) .logoPlaceholder {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.02));
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.companyName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.companyIndustry {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+:global([data-theme='light']) .statItem {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.statLabel {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.statValue {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.scoreWrapper {
+    margin-top: auto;
+}
+
+.scoreLabelContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+.scoreLabel {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.matchText {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.matchHigh {
+    color: #34d399;
+}
+
+.matchMedium {
+    color: #fbbf24;
+}
+
+.matchLow {
+    color: #f87171;
+}
+
+.progressBarBg {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+:global([data-theme='light']) .progressBarBg {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.progressBarFill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.bgHigh {
+    background: #34d399;
+}
+
+.bgMedium {
+    background: #fbbf24;
+}
+
+.bgLow {
+    background: #f87171;
+}
+
+/* The required target bar */
+.targetBar {
+    position: absolute;
+    top: -2px;
+    width: 3px;
+    height: 12px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    z-index: 2;
+}

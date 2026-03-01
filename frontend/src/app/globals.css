@@ -1,0 +1,42 @@
+:root {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --glass-bg: rgba(0, 0, 0, 0.04);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --primary-gradient: linear-gradient(135deg, #4f46e5, #3b82f6);
+  --accent-color: #4f46e5;
+}
+
+.dark {
+  --bg-primary: #0B0F14;
+  --bg-secondary: #111827;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --primary-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+  --accent-color: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

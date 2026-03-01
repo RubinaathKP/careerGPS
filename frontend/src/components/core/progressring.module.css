@@ -1,0 +1,51 @@
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg {
+    transform: rotate(-90deg);
+}
+
+.track {
+    fill: transparent;
+    stroke: var(--glass-border);
+}
+
+.progress {
+    fill: transparent;
+}
+
+/* Colors */
+.primary {
+    stroke: url(#primaryGradient);
+}
+
+.success {
+    stroke: #10b981;
+}
+
+.warning {
+    stroke: #f59e0b;
+}
+
+.critical {
+    stroke: #ef4444;
+}
+
+.textContainer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.percentage {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}

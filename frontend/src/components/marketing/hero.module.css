@@ -1,0 +1,167 @@
+.heroSection {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.textContent {
+    max-width: 600px;
+    z-index: 10;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 4.5rem;
+    }
+}
+
+.highlight {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.ctaGroup {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Simulated 3D Sphere */
+.visualContent {
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sphereWrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+@media (min-width: 768px) {
+    .sphereWrapper {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.coreSphere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #4f46e5, #000 80%);
+    box-shadow: inset -20px -20px 40px rgba(0, 0, 0, 0.5), inset 20px 20px 40px rgba(255, 255, 255, 0.2);
+    z-index: 2;
+    animation: rotateSphere 20s linear infinite;
+}
+
+.dark .coreSphere {
+    background: radial-gradient(circle at 30% 30%, #8b5cf6, #06b6d4, #0B0F14 80%);
+}
+
+.glowSphere {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    right: -20%;
+    bottom: -20%;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    filter: blur(60px);
+    opacity: 0.4;
+    z-index: 1;
+    animation: pulse 4s ease-in-out infinite alternate;
+}
+
+/* Floating Chips */
+.floatingChip {
+    position: absolute;
+    padding: 0.75rem 1.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    font-weight: 500;
+    color: var(--text-primary);
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.chip1 {
+    top: 10%;
+    left: -10%;
+}
+
+.chip2 {
+    bottom: 20%;
+    right: -5%;
+}
+
+.chip3 {
+    top: 50%;
+    right: -20%;
+}
+
+@keyframes rotateSphere {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0.6;
+    }
+}

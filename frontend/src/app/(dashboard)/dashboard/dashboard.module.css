@@ -1,0 +1,143 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.header {
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.readinessCardWrapper {
+    width: 100%;
+}
+
+.readinessCard {
+    overflow: hidden;
+}
+
+.readinessContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .readinessContent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.readinessText {
+    flex: 1;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+.ringWrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .statsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.cardWrapper {
+    display: flex;
+}
+
+.statCard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.statHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.statTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.statIcon {
+    color: var(--text-secondary);
+}
+
+.warningIcon {
+    color: #f59e0b;
+}
+
+.successIcon {
+    color: #10b981;
+}
+
+.statValue {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.statChange {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #10b981;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.statDesc {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}

@@ -1,0 +1,98 @@
+.container {
+    position: relative;
+    padding-left: 2rem;
+    /* Space for the vertical line and nodes */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.verticalLine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    /* Center with respect to the 16px circular indicator */
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-primary), rgba(var(--color-primary-rgb), 0.1));
+    z-index: 0;
+    transform-origin: top;
+}
+
+.node {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.node:last-child {
+    margin-bottom: 0;
+}
+
+.indicatorWrapper {
+    position: absolute;
+    left: -2rem;
+    /* Move back out of the padding */
+    top: 24px;
+    /* Align with visually pleasing center of the card title */
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.indicator {
+    color: var(--color-primary);
+    background-color: var(--bg-background, #0B0F14);
+    /* Needs to match page bg to clip line */
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    /* Creates the gap effect between line and circle */
+}
+
+:global([data-theme='light']) .indicator {
+    background-color: var(--bg-background, #F8FAFC);
+}
+
+.contentWrapper {
+    width: 100%;
+}
+
+.phaseCard {
+    padding: 1.5rem 2rem;
+    border-left: 3px solid transparent;
+    /* Prepare for possible active/completed state logic later */
+}
+
+.phaseCard:hover {
+    border-left-color: var(--color-primary);
+}
+
+.phaseName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.skillsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.checkIcon {
+    color: rgba(16, 185, 129, 0.8);
+    /* subtle success green */
+    flex-shrink: 0;
+}
