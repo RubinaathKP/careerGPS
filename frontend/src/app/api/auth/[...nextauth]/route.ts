@@ -20,13 +20,13 @@ const handler = NextAuth({
                 }
                 return null;
             }
-        }
         })
     ],
-// Removed custom pages so NextAuth uses the default login form
-session: {
-    strategy: "jwt",
+    // Removed custom pages so NextAuth uses the default login form
+    session: {
+        strategy: "jwt",
     },
+    secret: process.env.NEXTAUTH_SECRET,
 });
 
 export { handler as GET, handler as POST };

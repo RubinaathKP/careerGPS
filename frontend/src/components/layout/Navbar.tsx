@@ -41,8 +41,8 @@ export function Navbar() {
                     <div className={styles.desktopAuth}>
                         {session ? (
                             <>
-                                <Link href="/dashboard">
-                                    <Button variant="ghost" size="sm">Dashboard</Button>
+                                <Link href="/dashboard" className={styles.navLink}>
+                                    Dashboard
                                 </Link>
                                 <Button variant="secondary" size="sm" onClick={() => signOut()}>Logout</Button>
                             </>
@@ -75,7 +75,7 @@ export function Navbar() {
                         {session ? (
                             <>
                                 <Link href="/dashboard" style={{ width: '100%' }}>
-                                    <Button variant="glow" className={styles.fullWidth}>Dashboard</Button>
+                                    <div className={`${styles.fullWidth} ${styles.mobileLink} ${styles.primaryGlow}`}>Dashboard</div>
                                 </Link>
                                 <Button variant="ghost" className={styles.fullWidth} onClick={() => signOut()}>Logout</Button>
                             </>
